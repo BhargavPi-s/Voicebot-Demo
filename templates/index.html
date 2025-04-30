@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Assistant</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Sentinel's Voice Assistant</h1>
+        </header>
+        
+        <main>
+            <div class="call-indicator" id="callIndicator">
+                <div class="indicator-text" id="indicatorText">Start Call</div>
+            </div>
+            
+            <div class="controls">
+                <button id="startCallBtn" class="btn btn-primary">Start Call</button>
+                <button id="endCallBtn" class="btn btn-danger" disabled>End Call</button>
+            </div>
+            
+            <div class="status-container">
+                <div id="statusMessage" class="status-message"></div>
+                <div id="timer" class="timer">00:00</div>
+            </div>
+            
+            <div class="conversation-container" id="conversationContainer">
+                <!-- Conversation messages will be displayed here -->
+            </div>
+        </main>
+        
+        <div id="audioContainer" class="hidden">
+            <!-- Hidden audio element for playback -->
+            <audio id="responseAudio" autoplay></audio>
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
