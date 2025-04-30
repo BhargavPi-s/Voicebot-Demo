@@ -101,7 +101,7 @@ function initWebSocket() {
         appState.webSocketConnection = null;
     }
     
-    appState.webSocketConnection = new WebSocket(`ws://${window.location.host}/ws/${appState.conversationId}`);
+    appState.webSocketConnection = new WebSocket(`wss://${window.location.host}/ws/${appState.conversationId}`);
     
     appState.webSocketConnection.onopen = () => {
         console.log('WebSocket connection established');
